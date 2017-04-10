@@ -14,10 +14,10 @@ javah -jni JniTest
 g++ "-I/System/Library/Frameworks/JavaVM.framework/Versions/Current/Headers" -c JniTest.cpp
 
 # package compiled cpp class into  jni library
-g++ -dynamiclib -o libJniTest.jnilib JniTest.o
+g++ -dynamiclib -o ../resources/libJniTest.jnilib JniTest.o
 
 # run the program
-java JniTest
+java -Djava.library.path=../resources JniTest
 
 # remove classes
-rm -rf *.class JniTest.h JniTest.o libJniTest.jnilib
+rm -rf *.class JniTest.h JniTest.o ../resources/libJniTest.jnilib
