@@ -6,5 +6,7 @@ System requirements:
 - JDK 1.8.0 or higher
 
 # build and run
+```bash
 cd src/main/resources
 ./commands.sh
+```
